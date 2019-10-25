@@ -63,6 +63,29 @@ abstract class cars implements means_of_transport {
             }
         }
 
+            class Cycyryznic extends aircraft
+            {
+                @Override
+                public void go()
+                {
+                    System.out.println("телил как фанера");
+                }
+
+                @Override
+                public void not_work()
+                {
+                    System.out.println("полетит в любом случае");
+                }
+
+                @Override
+                public void sounds()
+                {
+                    System.out.println("пердит как дед");
+                }
+            }
+
+
+
 
 
 class subbaru extends cars
@@ -153,7 +176,7 @@ public class Model
         }
     }
 
-    class MOTO extends motorcycles
+        class MOTO extends motorcycles
     {
         @Override
         public void go()
@@ -174,8 +197,51 @@ public class Model
         }
     }
 
+    class moto_whis_koliaska extends motorcycles
+    {
+        @Override
+        public void go()
+        {
+            System.out.println("гонит как ветер");
+        }
+
+        @Override
+        public void not_work()
+        {
+            System.out.println("стоит в гараже 40 лет");
+        }
+
+        @Override
+        public void sounds()
+        {
+            System.out.println("звук знакомый с дестсва");
+        }
+    }
+
+    class yamaha extends motorcycles
+    {
+        @Override
+        public void go()
+        {
+            System.out.println("летит примиком на тот свет");
+        }
+
+        @Override
+        public void not_work()
+        {
+            System.out.println("вечно течёт мотор");
+        }
+
+        @Override
+        public void sounds()
+        {
+            System.out.println("жужит как бензопила");
+        }
+    }
+
     public static void main(String[] args)
     {
+        System.out.println("\u001B[33m" + "машины" + "\u001B[0m");
         System.out.println("\u001B[31m" + "суба" + "\u001B[0m");
         subbaru Car1 = new subbaru();
         Car1.go();
@@ -194,8 +260,42 @@ public class Model
         Car3.not_work();
         Car3.sounds();
 
+        System.out.println("\u001B[33m" + "мотоциклы" + "\u001B[0m");
         System.out.println("\u001B[31m" + "Мото" + "\u001B[0m");
         Model.MOTO moto = new Model().new MOTO();
         moto.go();
+        moto.not_work();
+        moto.sounds();
+
+        System.out.println("\u001B[31m" + "Мотоцикл с коляской" + "\u001B[0m");
+        Model.moto_whis_koliaska colizska = new Model().new moto_whis_koliaska();
+        colizska.go();
+        colizska.not_work();
+        colizska.sounds();
+
+        System.out.println("\u001B[31m" + "Ямаха" + "\u001B[0m");
+        Model.yamaha yamaha = new Model().new yamaha();
+        yamaha.go();
+        yamaha.not_work();
+        yamaha.sounds();
+
+        System.out.println("\u001B[33m" + "самолёты" + "\u001B[0m");
+        System.out.println("\u001B[31m" + "боинг" + "\u001B[0m");
+        boing Fly1 = new boing();
+        Fly1.go();
+        Fly1.not_work();
+        Fly1.sounds();
+
+        System.out.println("\u001B[31m" + "Миг" + "\u001B[0m");
+        MIG Fly2 = new MIG();
+        Fly2.go();
+        Fly2.not_work();
+        Fly2.sounds();
+
+        System.out.println("\u001B[31m" + "кукурузник" + "\u001B[0m");
+        Cycyryznic Fly3 = new Cycyryznic();
+        Fly3.go();
+        Fly3.not_work();
+        Fly3.sounds();
     }
 }
